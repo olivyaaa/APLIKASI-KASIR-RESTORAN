@@ -32,7 +32,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
     }
     
     public void Nonaktif(){
-        jctanggal.setEnabled(false);
+        jcdaritanggal.setEnabled(false);
         jcdaritanggal.setEnabled(false);
         jcdaritanggal2.setEnabled(false);
         btn_pilih.setEnabled(false);
@@ -120,12 +120,9 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         btn_lihat = new javax.swing.JPanel();
         rb_tanggal = new javax.swing.JRadioButton();
-        jctanggal = new com.toedter.calendar.JDateChooser();
         btn_liaht = new javax.swing.JButton();
-        jcdaritanggal = new com.toedter.calendar.JDateChooser();
         rb_daritanggal = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
-        jcdaritanggal2 = new com.toedter.calendar.JDateChooser();
         btn_caritanggal = new javax.swing.JButton();
         rb_semua = new javax.swing.JRadioButton();
         rb_pegawai = new javax.swing.JRadioButton();
@@ -136,6 +133,8 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
         btn_pilih = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_transaksi = new javax.swing.JTable();
+        jcdaritanggal = new com.toedter.calendar.JDateChooser();
+        jcdaritanggal2 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -200,9 +199,6 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
             }
         });
 
-        jctanggal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jctanggal.setPreferredSize(new java.awt.Dimension(200, 25));
-
         btn_liaht.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btn_liaht.setText("Lihat");
         btn_liaht.addActionListener(new java.awt.event.ActionListener() {
@@ -210,9 +206,6 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
                 btn_liahtActionPerformed(evt);
             }
         });
-
-        jcdaritanggal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jcdaritanggal.setPreferredSize(new java.awt.Dimension(200, 25));
 
         rb_daritanggal.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(rb_daritanggal);
@@ -226,9 +219,6 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel11.setText("s/d");
-
-        jcdaritanggal2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jcdaritanggal2.setPreferredSize(new java.awt.Dimension(200, 25));
 
         btn_caritanggal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btn_caritanggal.setText("Lihat");
@@ -327,67 +317,79 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
         btn_lihat.setLayout(btn_lihatLayout);
         btn_lihatLayout.setHorizontalGroup(
             btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btn_lihatLayout.createSequentialGroup()
-                .addGap(156, 156, 156)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_lihatLayout.createSequentialGroup()
                 .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(btn_lihatLayout.createSequentialGroup()
                         .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rb_tanggal)
                             .addGroup(btn_lihatLayout.createSequentialGroup()
-                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGap(156, 156, 156)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(btn_lihatLayout.createSequentialGroup()
+                                .addGap(304, 304, 304)
+                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rb_tanggal)
                                     .addGroup(btn_lihatLayout.createSequentialGroup()
-                                        .addComponent(rb_semua)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(rb_pegawai))
-                                    .addComponent(jctanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_liaht)))
-                        .addGap(18, 18, 18)
-                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(btn_lihatLayout.createSequentialGroup()
-                                .addComponent(jcdaritanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel11)
-                                .addGap(18, 18, 18)
-                                .addComponent(jcdaritanggal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_caritanggal))
-                            .addComponent(rb_daritanggal))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btn_lihatLayout.createSequentialGroup()
-                .addContainerGap(54, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jcdaritanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(btn_lihatLayout.createSequentialGroup()
+                                                .addGap(59, 59, 59)
+                                                .addComponent(rb_semua)
+                                                .addGap(29, 29, 29)
+                                                .addComponent(rb_pegawai)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btn_liaht)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel11)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rb_daritanggal)
+                                    .addComponent(jcdaritanggal2, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)))
+                        .addComponent(btn_caritanggal))
+                    .addGroup(btn_lihatLayout.createSequentialGroup()
+                        .addContainerGap(54, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47))
         );
         btn_lihatLayout.setVerticalGroup(
             btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btn_lihatLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
                 .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(btn_lihatLayout.createSequentialGroup()
-                        .addComponent(rb_tanggal)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jctanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(rb_semua)
+                            .addComponent(rb_pegawai))
+                        .addGap(18, 18, 18))
                     .addGroup(btn_lihatLayout.createSequentialGroup()
-                        .addComponent(rb_daritanggal)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jcdaritanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn_liaht)
-                            .addComponent(jLabel11)))
-                    .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btn_caritanggal)
-                        .addComponent(jcdaritanggal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rb_semua)
-                    .addComponent(rb_pegawai))
-                .addGap(18, 18, 18)
+                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(btn_lihatLayout.createSequentialGroup()
+                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(btn_lihatLayout.createSequentialGroup()
+                                        .addGap(37, 37, 37)
+                                        .addComponent(rb_daritanggal))
+                                    .addGroup(btn_lihatLayout.createSequentialGroup()
+                                        .addGap(26, 26, 26)
+                                        .addComponent(rb_tanggal)))
+                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(btn_lihatLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btn_caritanggal)
+                                            .addComponent(jcdaritanggal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(btn_lihatLayout.createSequentialGroup()
+                                        .addGap(4, 4, 4)
+                                        .addComponent(jcdaritanggal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(btn_lihatLayout.createSequentialGroup()
+                                .addGroup(btn_lihatLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(btn_liaht)
+                                    .addComponent(jLabel11))
+                                .addGap(3, 3, 3)))
+                        .addGap(78, 78, 78)))
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -550,7 +552,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
 
     private void rb_tanggalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_tanggalActionPerformed
         // TODO add your handling code here:
-        jctanggal.setEnabled(true);
+        jcdaritanggal.setEnabled(true);
         jcdaritanggal.setEnabled(false);
         jcdaritanggal2.setEnabled(false);
         btn_pilih.setEnabled(false);
@@ -561,7 +563,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
 
     private void rb_daritanggalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_daritanggalActionPerformed
         // TODO add your handling code here:
-        jctanggal.setEnabled(false);
+        jcdaritanggal.setEnabled(false);
         jcdaritanggal.setEnabled(true);
         jcdaritanggal2.setEnabled(true);
         btn_pilih.setEnabled(false);
@@ -579,7 +581,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
 
     private void rb_pegawaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_pegawaiActionPerformed
         // TODO add your handling code here:
-        jctanggal.setEnabled(false);
+        jcdaritanggal.setEnabled(false);
         jcdaritanggal.setEnabled(false);
         jcdaritanggal2.setEnabled(false);
         btn_pilih.setEnabled(true);
@@ -595,7 +597,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
         model.fireTableDataChanged();
         
         SimpleDateFormat sDate = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sDate.format(jctanggal.getDate());
+        String date = sDate.format(jcdaritanggal.getDate());
         try{
             Connection c = Koneksi.KoneksiDb();
             String sql = "Select * From transaksi Where tanggal = '"+date+"'";
@@ -618,7 +620,7 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
         }catch(Exception e){
             System.out.println("Cari Data Error");
         }finally{
-            jctanggal.setDate(null);
+            jcdaritanggal.setDate(null);
         }
         
     }//GEN-LAST:event_btn_liahtActionPerformed
@@ -849,7 +851,6 @@ public class FromLaporanTransaksi extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private com.toedter.calendar.JDateChooser jcdaritanggal;
     private com.toedter.calendar.JDateChooser jcdaritanggal2;
-    private com.toedter.calendar.JDateChooser jctanggal;
     private javax.swing.JLabel lb_datameja;
     private javax.swing.JLabel lb_datamenu;
     private javax.swing.JLabel lb_lappendapatan;
